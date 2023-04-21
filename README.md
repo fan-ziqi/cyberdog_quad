@@ -68,6 +68,8 @@ sudo chmod +x quad-sdk/setup.sh
 ./quad-sdk/setup.sh 
 # 需要拷贝一下头文件，否则编译会报错
 sudo cp -r /usr/local/include/coin/* /usr/local/include
+# 安装额外需要的一个依赖
+sudo apt-get install libgfortran4
 cd ..
 catkin build
 source ./devel/setup.bash
