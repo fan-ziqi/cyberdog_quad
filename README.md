@@ -2,6 +2,11 @@
 
 小米铁蛋quad，[quad官方wiki](https://github.com/robomechanics/quad-sdk/wiki/)
 
+## 更新日志
+
+- [x] 调试环境
+- [ ] 接入Cyberdog
+
 ## 环境
 
 Ubuntu-20.04+ROS-Noetic（注意：在此环境下需要拉取noetic_devel分支）
