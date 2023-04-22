@@ -119,6 +119,16 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/robot_1/cmd_vel
 roslaunch quad_utils quad_plan.launch reference:=gbpl logging:=true
 ```
 
+## 其他
+
+MIT 和 unitree的腿编号：
+1   0
+3   2
+
+quad_sdk的腿编号：
+0   2
+1   3
+
 ## 参考文章
 
 [超越MIT Mini-Cheetah 的四足机器人开源项目（Quad-SDK）](https://zhuanlan.zhihu.com/p/522218252)
