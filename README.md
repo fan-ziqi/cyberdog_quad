@@ -27,7 +27,7 @@ cd Ipopt-3.12.7
 # 进入HSL文件夹并解压coinhsl
 cd Ipopt-3.12.7/ThirdParty/HSL
 unzip coinhsl-archive-xxx.zip
-# 创建软连接，名称必须为coinhsl
+# 创建软连接，名称必须为coinhsl，或者把文件夹名直接改成coinhsl
 ln -s ./coinhsl-archive-xxx/ coinhsl
 # 配置
 sudo chmod +x ./configure
@@ -35,13 +35,15 @@ sudo chmod +x ./configure
 # 编译
 make
 sudo make install
-cd Ipopt-3.12.7/ThirdParty/HSL/include/coin/ThirdParty
-sudo cp -r * /usr/local/include/
 ```
 
 编译Ipopt
 
 ```bash
+# 先拷贝一个头文件，否则编译出错
+cd Ipopt-3.12.7/ThirdParty/HSL/include/coin/ThirdParty
+sudo cp -r * /usr/local/include/
+# 编译
 make
 make install
 ```
