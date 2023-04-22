@@ -7,11 +7,9 @@
 - [x] 调试环境
 - [ ] 接入Cyberdog
 
-## 环境
-
-Ubuntu-20.04+ROS-Noetic（注意：在此环境下需要拉取noetic_devel分支）
-
 ## 部署
+
+运行环境：Ubuntu-20.04+ROS-Noetic（注意：在此环境下需要拉取noetic_devel分支）
 
 ### 安装Ipopt与HSL
 
