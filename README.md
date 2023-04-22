@@ -75,8 +75,40 @@ catkin build
 source ./devel/setup.bash
 ```
 
-## 使用
+## 测试
+
+开启一个终端（不要忘记source环境变量）
 
 ```bash
-
+roslaunch quad_utils quad_gazebo.launch
 ```
+
+其中，`world`为可选参数，比如`world:=rough_25cm`可更改地图。
+
+新开一个终端，发送消息让机器人站立，站立后ctrl+c退出
+
+```bash
+rostopic pub /robot_1/control/mode std_msgs/UInt8 "data: 1"
+```
+
+运行规划器
+
+```bash
+roslaunch quad_utils quad_plan.launch reference:=twist logging:=true
+```
+
+新开一个终端，打开遥控器节点：
+
+```bash
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/robot_1/cmd_vel
+```
+
+全局路点规划，运行后机器人会自动前进到目标位置，并依据地形在线规划全局轨迹和未来多个周期落足与GRF
+
+```bash
+roslaunch quad_utils quad_plan.launch reference:=gbpl logging:=true
+```
+
+## 参考文章
+
+[超越MIT Mini-Cheetah 的四足机器人开源项目（Quad-SDK）](https://zhuanlan.zhihu.com/p/522218252)
