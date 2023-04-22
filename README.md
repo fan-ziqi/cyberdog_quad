@@ -62,18 +62,23 @@ sudo ldconfig
 
 ```bash
 mkdir -p quad_ws/src && cd quad_ws/src
+# 如果您使用的是Ubuntu20.04和ROS-Noetic，记得拉取noetic_devel分支，官方仓库有个地方写错了，建议拉我的
 git clone -b noetic_devel https://github.com/fan-ziqi/quad-sdk.git
+# 将coinhsl拷贝过来
 cp -r /xxx/Ipopt-3.12.7/ThirdParty/HSL/coinhsl-archive-xxx ./quad-sdk/external/ipopt/coinhsl
 # 脚本是Windows编写的，需要删除其中的\r字符
 sed -i 's/\r//' quad-sdk/setup.sh quad-sdk/external/setup_deps.sh quad-sdk/quad_simulator/setup_deps.sh
+# 给权限运行脚本，请仔细检查脚本的输出，有报错都要解决。
 sudo chmod +x quad-sdk/setup.sh 
 ./quad-sdk/setup.sh 
-# 需要拷贝一下头文件，否则编译会报错
+# 需要拷贝头文件，否则编译会报错
 sudo cp -r /usr/local/include/coin/* /usr/local/include
 # 安装额外需要的一个依赖
 sudo apt-get install libgfortran4
+# 编译
 cd ..
 catkin build
+# 设置环境变量
 source ./devel/setup.bash
 ```
 
