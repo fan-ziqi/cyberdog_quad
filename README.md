@@ -6,6 +6,9 @@
 
 - [x] 调试环境
 - [ ] 接入Cyberdog
+  - [x] description包
+  - [ ] yaml参数文件
+
 
 ## 部署
 
