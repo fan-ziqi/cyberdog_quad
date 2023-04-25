@@ -67,9 +67,8 @@ sudo ldconfig
 ### 编译代码
 
 ```bash
-mkdir -p quad_ws/src && cd quad_ws/src
-# 如果您使用的是Ubuntu20.04和ROS-Noetic，记得拉取noetic_devel分支，官方仓库有个地方写错了，建议拉我的
-git clone -b noetic_devel https://github.com/fan-ziqi/quad-sdk.git
+git clone https://github.com/fan-ziqi/cyberdog_quad.git
+cd cyberdog_quad/quad_ws/src
 # 将coinhsl拷贝过来
 cp -r /xxx/Ipopt-3.12.7/ThirdParty/HSL/coinhsl-archive-xxx ./quad-sdk/external/ipopt/coinhsl
 # 脚本是Windows编写的，需要删除其中的\r字符

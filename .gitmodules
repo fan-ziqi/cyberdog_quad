@@ -1,0 +1,4 @@
+[submodule "quad_ws/src/quad-sdk"]
+	path = quad_ws/src/quad-sdk
+	url = https://github.com/fan-ziqi/quad-sdk.git
+	branch = noetic_devel
