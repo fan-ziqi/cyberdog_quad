@@ -87,6 +87,13 @@ catkin build
 source ./devel/setup.bash
 ```
 
+更新代码
+
+```bash
+git pull
+git submodule update --remote --recursive
+```
+
 ## 测试
 
 开启一个终端（不要忘记source环境变量）
