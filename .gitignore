@@ -1,7 +1,4 @@
-# Ignore everything
-*
-
-# But not these files...
-!.gitignore
-!README.md
-
+Ipopt-3.12.7
+*.zip
+quad_ws/*
+!quad_ws/src
