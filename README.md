@@ -67,7 +67,7 @@ sudo ldconfig
 ### 编译代码
 
 ```bash
-git clone https://github.com/fan-ziqi/cyberdog_quad.git
+git clone --recursive https://github.com/fan-ziqi/cyberdog_quad.git
 cd cyberdog_quad/quad_ws/src
 # 将coinhsl拷贝过来
 cp -r /xxx/Ipopt-3.12.7/ThirdParty/HSL/coinhsl-archive-xxx ./quad-sdk/external/ipopt/coinhsl
